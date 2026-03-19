@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
+import NavLinks from "./nav-links";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -38,17 +39,25 @@ export default function RootLayout({
     >
       <body>
         <nav className="nav">
-          <div className="nav-inner">
-            <Link className="nav-brand" href="/">
-              <img src="/logo.svg" alt="Logo ARTALO" />
-              <span className="brand-logo">ARTALO</span>
-            </Link>
-            <div className="nav-links">
-              <Link href="/">Home</Link>
-              <Link href="/opere">Opere</Link>
-              <Link href="/eventi">Eventi</Link>
-              <Link href="/servizi">Servizi</Link>
-              <Link href="/chi-siamo">Chi siamo</Link>
+          <div className="nav-stack">
+            <span className="nav-desktop-layer" aria-hidden="true"></span>
+            <div className="nav-inner">
+              <Link className="nav-brand" href="/">
+                <img src="/logo.svg" alt="Logo ARTALO" />
+                <span className="brand-logo">ARTALO</span>
+              </Link>
+              <input
+                className="nav-toggle-check"
+                type="checkbox"
+                id="burger-menu"
+                aria-label="Apri o chiudi menu di navigazione"
+              />
+              <label className="burger" htmlFor="burger-menu" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </label>
+              <NavLinks />
             </div>
           </div>
         </nav>
