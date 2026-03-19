@@ -43,7 +43,7 @@ export default function RootLayout({
             <span className="nav-desktop-layer" aria-hidden="true"></span>
             <div className="nav-inner">
               <Link className="nav-brand" href="/">
-                <img src="/logo.svg" alt="Logo ARTALO" />
+                <img src="./logo.svg" alt="Logo ARTALO" />
                 <span className="brand-logo">ARTALO</span>
               </Link>
               <input
