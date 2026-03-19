@@ -1,65 +1,110 @@
-import Image from "next/image";
+import Link from "next/link";
+import {
+  FaLeaf,
+  FaPaintBrush,
+  FaRecycle,
+  FaArrowRight,
+  FaCube,
+} from "react-icons/fa";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="page">
+      <header className="hero" id="home">
+        <div className="hero-inner">
+          <div>
+            <span className="badge">
+              <FaRecycle /> Recupero creativo e sostenibilità
+            </span>
+            <h1 className="hero-title hero-title-edo">
+              ARTALO dà nuova vita agli scarti con <span>design poetico</span>.
+            </h1>
+            <p className="hero-text">
+              ARTALO è un laboratorio di sostenibilità e creatività che recupera
+              materiali destinati alla discarica e li trasforma in oggetti unici,
+              fatti a mano e pieni di storia.
+            </p>
+            <div className="hero-actions">
+              <Link className="button button-primary" href="/opere">
+                Scopri le opere
+                <FaArrowRight />
+              </Link>
+              <Link className="button button-secondary" href="/chi-siamo">
+                Collabora con noi
+              </Link>
+            </div>
+          </div>
+          <div className="hero-art">
+            <strong>Materia in evoluzione</strong>
+            <p className="hero-text" style={{ marginTop: "0.8rem" }}>
+              Ogni oggetto nasce da un gesto creativo: pulire, ripensare,
+              intrecciare. Il risultato è un design autentico che racconta il suo
+              passato.
+            </p>
+            <div className="hero-art-grid">
+              <div className="pill">
+                <FaCube /> Pallet rigenerati
+              </div>
+              <div className="pill">
+                <FaLeaf /> Vetro recuperato
+              </div>
+              <div className="pill">
+                <FaRecycle /> Metallo second-life
+              </div>
+              <div className="pill">
+                <FaPaintBrush /> Tessuti ritrovati
+              </div>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </header>
+
+      <section className="section">
+        <div className="section-inner split">
+          <div>
+            <h2 className="section-title">Un ecosistema creativo</h2>
+            <p className="section-subtitle">
+              ARTALO è un progetto di sostenibilità e creatività che trasforma
+              scarti destinati alla discarica in design unici. Ogni collezione è
+              una storia di rinascita.
+            </p>
+            <div className="hero-actions">
+              <Link className="button button-primary" href="/servizi">
+                Servizi su misura
+                <FaArrowRight />
+              </Link>
+              <Link className="button button-secondary" href="/eventi">
+                Eventi e workshop
+              </Link>
+            </div>
+          </div>
+          <div className="manifesto">
+            <h3 style={{ marginTop: 0 }}>Manifesto ARTALO</h3>
+            <p className="section-subtitle">
+              Crediamo che la creatività possa guidare il cambiamento. Ogni
+              oggetto è un gesto di cura verso la Terra.
+            </p>
+            <ul>
+              <li>
+                <FaLeaf /> Design lento e consapevole
+              </li>
+              <li>
+                <FaRecycle /> Materiali salvati dalla discarica
+              </li>
+              <li>
+                <FaPaintBrush /> Collaborazioni con comunità locali
+              </li>
+              <li>
+                <FaCube /> Oggetti irripetibili e emotivi
+              </li>
+            </ul>
+          </div>
         </div>
-      </main>
+      </section>
+
+      <footer className="footer">
+        ARTALO · Recupero creativo, sostenibilità e design etico.
+      </footer>
     </div>
   );
 }
