@@ -40,7 +40,7 @@ export default function Home() {
           </div>
           <div className="hero-art">
             <img
-              src="/foto_martina.png"
+              src="./foto_martina.png"
               alt="Martina - progetto Artalo"
               className="hero-photo"
             />
