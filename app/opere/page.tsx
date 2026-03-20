@@ -158,7 +158,6 @@ export default function OperePage() {
           </div>
         </div>
       </section>
-
       <section className="section">
         <div className="section-inner opere-list">
           {opereItems.map(({ slug, name, description, image, gallery }) => (
