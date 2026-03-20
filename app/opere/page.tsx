@@ -3,7 +3,21 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
-const opereItems = [
+type GalleryItem = {
+  type: "image" | "video";
+  src: string;
+  alt: string;
+};
+
+type OpereItem = {
+  slug: string;
+  name: string;
+  description: string;
+  image?: string;
+  gallery?: GalleryItem[];
+};
+
+const opereItems: OpereItem[] = [
   {
     slug: "the-electric-city",
     name: "Città elettronica futuristica",
@@ -56,12 +70,6 @@ Per la sua forza espressiva e l’uso consapevole dei materiali, l’opera ha ri
     ],
   },
 ];
-
-type GalleryItem = {
-  type: "image" | "video";
-  src: string;
-  alt: string;
-};
 
 function OpereCarousel({ gallery, label }: { gallery: GalleryItem[]; label: string }) {
   const [activeIndex, setActiveIndex] = useState(0);
