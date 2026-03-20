@@ -12,31 +12,31 @@ const collaborations = [
   {
     href: "https://www.riarteco.it/core/",
     label: "Riarteco",
-    logo: "/collaboratori/riarteco.jpg",
+    logo: "./collaboratori/riarteco.jpg",
     format: "wide",
   },
   {
     href: "https://www.associazionenuovefrontiere.org/",
     label: "Associazione Nuove Frontiere",
-    logo: "/collaboratori/logo niove frontiere.png",
+    logo: "./collaboratori/logo niove frontiere.png",
     format: "wide",
   },
   {
     href: "https://www.facebook.com/CustodidellaPaludediTorreFlavia/",
     label: "I Custodi di Torre Flavia",
-    logo: "/collaboratori/logo I Custodi di Torre Flavia.jpeg",
+    logo: "./collaboratori/logo I Custodi di Torre Flavia.jpeg",
     format: "wide",
   },
   {
     href: "https://terzoparadiso.org/",
     label: "Terzo Paradiso",
-    logo: "/collaboratori/logo 3paradiso.jpg",
+    logo: "./collaboratori/logo 3paradiso.jpg",
     format: "square",
   },
   {
     href: "https://www.lazioinnova.it/",
     label: "Lazio Innova",
-    logo: "/collaboratori/lazio-innova.jpg",
+    logo: "./collaboratori/lazio-innova.jpg",
     format: "wide",
   },
   {

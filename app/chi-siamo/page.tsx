@@ -14,7 +14,12 @@ export default function ChiSiamoPage() {
             ambientale.
           </p>
           <div className="hero-actions">
-            <a className="button button-primary" href="mailto:artalo.lab@gmail.com">
+            <a
+              className="button button-primary"
+              href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=artalo.lab@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
               Scrivici
             </a>
             <Link className="button button-secondary" href="/eventi">
@@ -39,7 +44,7 @@ Oggi si definisce un’artivista, un’artigiana e con Artalo promuove la messa 
 
           <article className="hero-art">
             <img
-              src="/foto_martina.png"
+              src="./foto_martina.png"
               alt="Martina Troiano"
               className="hero-photo"
             />
@@ -73,7 +78,7 @@ E loro nel linguaggi di quel momento da videogamer mi risposero
 
           <article className="hero-art">
             <img
-              src="/chi_siamo/hystory.jpg"
+              src="./chi_siamo/hystory.jpg"
               alt="My History"
               className="hero-photo"
             />
@@ -95,7 +100,7 @@ Un centro di riciclo creativo, che mette in comunicazione gli enti interessati c
           </article>
 
           <article className="hero-art chi-siamo-image-card">
-            <img src="/chi_siamo/project.jpg" alt="Project" className="hero-photo" />
+            <img src="./chi_siamo/project.jpg" alt="Project" className="hero-photo" />
           </article>
         </div>
       </section>
@@ -116,7 +121,7 @@ Offre inoltre un notevole sviluppo di economia circolare sul territorio, solleva
           </article>
 
           <article className="hero-art chi-siamo-image-card">
-            <img src="/chi_siamo/mission.jpeg" alt="Mission" className="hero-photo" />
+            <img src="./chi_siamo/mission.jpeg" alt="Mission" className="hero-photo" />
           </article>
         </div>
       </section>

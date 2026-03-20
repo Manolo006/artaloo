@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 const contactLinks = [
   {
-    href: "mailto:artalo.lab@gmail.com",
+    href: "https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=artalo.lab@gmail.com",
     label: "Email",
     icon: FaEnvelope,
   },
@@ -54,7 +54,7 @@ const contactLinks = [
     icon: FaYoutube,
   },
   {
-    href: "https://artalo.art/link/",
+    href: "./link/",
     label: "Tutti i link",
     icon: FaLink,
   },

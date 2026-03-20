@@ -806,33 +806,23 @@ img {
 
 .linkhub-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.9rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(2, auto);
+  justify-items: center;
+  gap: 0.85rem;
 }
 
-.linkhub-item {
-  background: var(--surface);
-  border-radius: 18px;
-  padding: 0.95rem 0.9rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.55rem;
-  font-weight: 700;
-  color: #11525b;
-  border: 1px solid rgba(0, 135, 169, 0.12);
-  box-shadow: 0 10px 24px rgba(0, 135, 169, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+.linkhub-grid a {
+  display: inline-block;
 }
 
-.linkhub-item:hover {
-  transform: translateY(-2px);
-  border-color: rgba(0, 135, 169, 0.35);
-  box-shadow: 0 14px 30px rgba(0, 135, 169, 0.16);
+.linkhub-grid a:hover {
+  opacity: 0.95;
 }
 
-.linkhub-item svg {
-  color: var(--primary-dark);
+.linkhub-item-image {
+  width: 128px;
+  height: auto;
 }
 
 .footer {
@@ -1459,10 +1449,6 @@ body:has(.page-bg-viola) .footer.test-footer {
   .test-footer-collab-item.format-tall .test-footer-collab-logo-wrap {
     width: 40px;
     height: 58px;
-  }
-
-  .linkhub-grid {
-    grid-template-columns: 1fr;
   }
 
   .linkhub-section {

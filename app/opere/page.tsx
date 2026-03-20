@@ -24,7 +24,7 @@ const opereItems: OpereItem[] = [
     description: `Questa è stata sicuramente una delle mie prime opere realizzate con materiali di scarto, l’ho realizzata per il Degree Show nell’ultimo anno universitario (2005). Avevo recuperato dai miei compagni di studio tutti i loro telefoni rotti, televisori, in realtà qualsiasi device in distruzione.
 
 Poi assieme ai miei scarti scenografici, cavi elettrici, lampadine e plastiche varie tra le quali bottiglie, avevo costruito questo modellino, scenografia di una città elettronica futuristica, ambientazione di una mia personale rivisitazione della storia di Giacomino e il fagiolo magico.`,
-    image: "/opere/the_electric_city.JPG",
+    image: "./opere/the_electric_city.JPG",
   },
   {
     slug: "generazione-di-microplastiche",
@@ -36,7 +36,7 @@ Viviamo in un’epoca in cui le microplastiche sono ovunque. Invisibili, ubiquit
 Ho raccolto la plastica direttamente dalla spiaggia, seguendo l’idea che l’opera dovesse nascere non dalla rappresentazione, ma dalla presenza reale del problema. Gli scarti diventano così il materiale con cui ricreo un feto custodito nel grembo di una figura femminile.
 
 L’opera diventa un’immagine sospesa tra denuncia e fragilità, un invito a riflettere sul rapporto intimo e ormai irreversibile tra l’umano e l’artificiale.`,
-    image: "/opere/generazione_di_microplastiche.png",
+    image: "./opere/generazione_di_microplastiche.png",
   },
   {
     slug: "singolarita",
@@ -48,7 +48,7 @@ In Singolarità (verso l’infinito) il corpo umano si configura come soglia e l
 Lo specchio assume il valore simbolico dell’acqua primordiale: superficie riflettente e varco capace di mettere in comunicazione mondi differenti. Il corpo diventa ponte tra terra, cielo e Io.
 
 Il titolo rimanda al concetto di singolarità della fisica teorica, trasformato in metafora di un luogo interiore estremo, in cui l’Io si dissolve per aprirsi a una dimensione infinita.`,
-    image: "/opere/singolarita.png",
+    image: "./opere/singolarita.png",
   },
   {
     slug: "gabbia-del-potere",
@@ -61,12 +61,12 @@ La scelta di utilizzare esclusivamente materiali di scarto e plastica spiaggiata
 
 Per la sua forza espressiva e l’uso consapevole dei materiali, l’opera ha ricevuto il Primo Premio Categoria Artisti Professionisti.`,
     gallery: [
-      { type: "image", src: "/opere/gabbia_del_potere/progetto.JPG", alt: "Gabbia del potere - progetto" },
-      { type: "image", src: "/opere/gabbia_del_potere/gabbia_del_potere.JPG", alt: "Gabbia del potere - lavorazione" },
-      { type: "image", src: "/opere/gabbia_del_potere/gabbia_finito.jpg", alt: "Gabbia del potere - opera finita" },
-      { type: "image", src: "/opere/gabbia_del_potere/mappamondo.jpg", alt: "Gabbia del potere - dettaglio mappamondo" },
-      { type: "image", src: "/opere/gabbia_del_potere/mano.jpg", alt: "Gabbia del potere - dettaglio mano" },
-      { type: "video", src: "/opere/gabbia_del_potere/mappamondo_gira.MOV", alt: "Gabbia del potere - video" },
+      { type: "image", src: "./opere/gabbia_del_potere/progetto.JPG", alt: "Gabbia del potere - progetto" },
+      { type: "image", src: "./opere/gabbia_del_potere/gabbia_del_potere.JPG", alt: "Gabbia del potere - lavorazione" },
+      { type: "image", src: "./opere/gabbia_del_potere/gabbia_finito.jpg", alt: "Gabbia del potere - opera finita" },
+      { type: "image", src: "./opere/gabbia_del_potere/mappamondo.jpg", alt: "Gabbia del potere - dettaglio mappamondo" },
+      { type: "image", src: "./opere/gabbia_del_potere/mano.jpg", alt: "Gabbia del potere - dettaglio mano" },
+      { type: "video", src: "./opere/gabbia_del_potere/mappamondo_gira.MOV", alt: "Gabbia del potere - video" },
     ],
   },
 ];
@@ -158,7 +158,6 @@ export default function OperePage() {
           </div>
         </div>
       </section>
-
       <section className="section">
         <div className="section-inner opere-list">
           {opereItems.map(({ slug, name, description, image, gallery }) => (

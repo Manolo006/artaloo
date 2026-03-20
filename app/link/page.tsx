@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaTiktok,
-  FaYoutube,
-  FaWhatsapp,
-  FaEnvelope,
-} from "react-icons/fa";
+import fbImage from "./link/fb.png";
+import igImage from "./link/ig.png";
+import ttImage from "./link/tt.png";
+import ytImage from "./link/yt.png";
+import wpImage from "./link/wp.png";
+import gmailImage from "./link/gmail.png";
 
 export const metadata: Metadata = {
   title: "Link | ARTALO",
@@ -18,32 +17,32 @@ const socialLinks = [
   {
     href: "https://www.facebook.com/artalo.lab",
     label: "Facebook",
-    icon: FaFacebookF,
+    imageSrc: fbImage,
   },
   {
     href: "https://www.instagram.com/artalolab__",
     label: "Instagram",
-    icon: FaInstagram,
+    imageSrc: igImage,
   },
   {
     href: "https://www.tiktok.com/@artalolab",
     label: "TikTok",
-    icon: FaTiktok,
+    imageSrc: ttImage,
   },
   {
     href: "https://www.youtube.com/@Artaloartalo",
     label: "YouTube",
-    icon: FaYoutube,
+    imageSrc: ytImage,
   },
   {
     href: "https://wa.me/3392530535",
     label: "WhatsApp",
-    icon: FaWhatsapp,
+    imageSrc: wpImage,
   },
   {
-    href: "mailto:artalo.lab@gmail.com",
+    href: "https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=artalo.lab@gmail.com",
     label: "Email",
-    icon: FaEnvelope,
+    imageSrc: gmailImage,
   },
 ];
 
@@ -53,24 +52,28 @@ export default function LinkHubPage() {
       <section className="section linkhub-section">
         <div className="section-inner linkhub-inner">
           <Link href="/" className="linkhub-logo" aria-label="Torna alla home">
-            <img src="/logo.svg" alt="Logo ARTALO" />
+            <img src="./logo.svg" alt="Logo ARTALO" />
             <span className="brand-logo">ARTALO</span>
           </Link>
 
           <h1 className="linkhub-title">I nostri link</h1>
 
           <div className="linkhub-grid">
-            {socialLinks.map(({ href, label, icon: Icon }) => (
+            {socialLinks.map(({ href, label, imageSrc }) => (
               <a
                 key={label}
                 href={href}
                 target="_blank"
                 rel="noreferrer"
-                className="linkhub-item"
                 aria-label={label}
               >
-                <Icon />
-                <span>{label}</span>
+                <Image
+                  src={imageSrc}
+                  alt={label}
+                  width={128}
+                  height={128}
+                  className="linkhub-item-image"
+                />
               </a>
             ))}
           </div>

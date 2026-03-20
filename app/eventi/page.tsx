@@ -10,8 +10,8 @@ const eventiItems = [
     description:
       "Sessioni di apprendimento pratico su come trasformare i materiali di scarto in opere d'arte.",
     gallery: [
-      { src: "/eventi/laboratori_1.jpg", alt: "Workshop creativi - attività" },
-      { src: "/eventi/laboratori_2.jpg", alt: "Workshop creativi - laboratorio" },
+      { src: "./eventi/laboratori_1.jpg", alt: "Workshop creativi - attività" },
+      { src: "./eventi/laboratori_2.jpg", alt: "Workshop creativi - laboratorio" },
     ],
   },
   {
@@ -21,8 +21,8 @@ const eventiItems = [
 
 Partecipare ai nostri laboratori non è solo un modo divertente per esprimere la propria creatività, ma è anche un'opportunità per sensibilizzare grandi e piccini sull'importanza del riciclo e della sostenibilità. Imparare a dare nuova vita agli oggetti ci aiuta a ridurre i rifiuti e a proteggere il nostro pianeta.`,
     gallery: [
-      { src: "/eventi/laboratori_1.jpg", alt: "LAB - laboratorio 1" },
-      { src: "/eventi/laboratori_2.jpg", alt: "LAB - laboratorio 2" },
+      { src: "./eventi/laboratori_1.jpg", alt: "LAB - laboratorio 1" },
+      { src: "./eventi/laboratori_2.jpg", alt: "LAB - laboratorio 2" },
     ],
   },
   {
@@ -34,8 +34,8 @@ Tutti possono diventare artisti e creatori, ognuno con le proprie diverse abilit
 
 Attualmente in collaborazione con A.P.S Nuove Frontiere.`,
     gallery: [
-      { src: "/eventi/diversamente_creativi.jpeg", alt: "Diversamente Creativi - attività 1" },
-      { src: "/eventi/diversamente_creativi_2.jpeg", alt: "Diversamente Creativi - attività 2" },
+      { src: "./eventi/diversamente_creativi.jpeg", alt: "Diversamente Creativi - attività 1" },
+      { src: "./eventi/diversamente_creativi_2.jpeg", alt: "Diversamente Creativi - attività 2" },
     ],
   },
   {
@@ -51,8 +51,8 @@ Oltre alla pulizia, queste giornate offrono anche l'opportunità di sensibilizza
 
 In sintesi, le giornate dedicate alla pulizia della spiaggia sono un modo fantastico per prendersi cura del nostro ambiente, divertirsi e fare nuove amicizie!`,
     gallery: [
-      { src: "/eventi/plastic_bliz_2.jpg", alt: "Plastic cleaning days - foto 2" },
-      { src: "/eventi/plastic_bliz_3.jpg", alt: "Plastic cleaning days - foto 3" },
+      { src: "./eventi/plastic_bliz_2.jpg", alt: "Plastic cleaning days - foto 2" },
+      { src: "./eventi/plastic_bliz_3.jpg", alt: "Plastic cleaning days - foto 3" },
     ],
   },
 ];
