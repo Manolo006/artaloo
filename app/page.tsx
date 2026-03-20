@@ -46,7 +46,7 @@ export default function Home() {
             />
             <div className="hero-photo-caption">
               <p className="hero-photo-name">Martina Troiano</p>
-              <p className="hero-photo-role">Fondatrice di ARTALO</p>
+              <p className="hero-photo-role">Fondatrice · Artivista · Artigiana</p>
             </div>
           </div>
         </div>

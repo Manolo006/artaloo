@@ -1118,6 +1118,56 @@ body:has(.page-bg-viola) .footer.test-footer {
   line-height: 1.25;
 }
 
+.page-chi-siamo .section-inner {
+  background: #ffffffa9;
+  border: 1px solid rgba(182, 107, 174, 0.22);
+}
+
+.page-chi-siamo .manifesto,
+.page-chi-siamo .card {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(182, 107, 174, 0.22);
+}
+
+.page-chi-siamo .hero-art {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(182, 107, 174, 0.22);
+}
+
+.page-chi-siamo .chi-siamo-image-card {
+  padding: 0.55rem;
+  border-radius: 24px;
+}
+
+.page-chi-siamo .chi-siamo-image-card .hero-photo {
+  border-radius: 18px;
+  min-height: 320px;
+}
+
+@media (max-width: 768px) {
+  .page-chi-siamo .manifesto,
+  .page-chi-siamo .card {
+    padding: 1.1rem;
+  }
+
+  .page-chi-siamo .hero-photo {
+    min-height: 220px;
+    max-height: 340px;
+  }
+
+  .page-chi-siamo .chi-siamo-image-card .hero-photo {
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-chi-siamo .hero-photo,
+  .page-chi-siamo .chi-siamo-image-card .hero-photo {
+    min-height: 180px;
+    max-height: 260px;
+  }
+}
+
 @media (min-width: 900px) {
   .hero-inner {
     grid-template-columns: 1.1fr 0.9fr;
@@ -1207,7 +1257,7 @@ body:has(.page-bg-viola) .footer.test-footer {
 
   .nav-links {
     position: absolute;
-    top: calc(100% - 14px);
+    top: calc(100% - 28px);
     right: 0;
     left: auto;
     width: auto;
@@ -1239,10 +1289,10 @@ body:has(.page-bg-viola) .footer.test-footer {
   .nav-links::before {
     content: "";
     position: absolute;
-    top: -14px;
+    top: -28px;
     left: 0;
     right: 0;
-    height: 14px;
+    height: 28px;
     background: inherit;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
