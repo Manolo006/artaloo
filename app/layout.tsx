@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import NavShell from "./nav-shell";
+import FooterShell from "./footer-shell";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -39,6 +40,7 @@ export default function RootLayout({
       <body>
         <NavShell />
         {children}
+        <FooterShell />
       </body>
     </html>
   );

@@ -10,6 +10,7 @@ export default function NavShell() {
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 24);
     onScroll();
+
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -17,7 +18,6 @@ export default function NavShell() {
   return (
     <nav className={`nav ${isScrolled ? "is-scrolled" : ""}`}>
       <div className="nav-stack">
-        <span className="nav-desktop-layer" aria-hidden="true"></span>
         <div className="nav-inner">
           <Link className="nav-brand" href="/">
             <img src="./logo.svg" alt="Logo ARTALO" />

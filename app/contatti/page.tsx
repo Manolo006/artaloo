@@ -62,7 +62,7 @@ const contactLinks = [
 
 export default function ContattiPage() {
   return (
-    <div className="page">
+    <div className="page page-bg-viola">
       <section className="section hero hero-alt">
         <div className="section-inner">
           <p className="section-kicker">Contatti</p>

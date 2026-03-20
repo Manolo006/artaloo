@@ -3,7 +3,7 @@ import { FaRecycle, FaPalette, FaHammer } from "react-icons/fa";
 
 export default function ServiziPage() {
   return (
-    <div className="page">
+    <div className="page page-bg-green">
       <section className="section hero hero-alt">
         <div className="section-inner">
           <p className="section-kicker">Servizi</p>

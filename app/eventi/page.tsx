@@ -3,7 +3,7 @@ import { FaCalendarAlt, FaHandsHelping, FaCity } from "react-icons/fa";
 
 export default function EventiPage() {
   return (
-    <div className="page">
+    <div className="page page-bg-green">
       <section className="section hero hero-alt">
         <div className="section-inner">
           <p className="section-kicker">Eventi</p>

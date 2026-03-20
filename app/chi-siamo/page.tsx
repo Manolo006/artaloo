@@ -3,7 +3,7 @@ import { FaHeart, FaUsers, FaLeaf } from "react-icons/fa";
 
 export default function ChiSiamoPage() {
   return (
-    <div className="page">
+    <div className="page page-bg-viola">
       <section className="section hero hero-alt">
         <div className="section-inner">
           <p className="section-kicker">Chi siamo</p>
