@@ -72,13 +72,29 @@ img {
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
-  padding: 0.9rem 1.6rem;
+  padding: 0.72rem 1.35rem;
+  border-radius: 999px;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+  width: 100%;
+  isolation: isolate;
+  transition:
+    padding 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    gap 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.nav-inner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   border-radius: 999px;
   background: linear-gradient(90deg, #20c0e5, #86ddcc, #b496e1);
   box-shadow: 0 12px 30px rgba(0, 135, 169, 0.18);
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
+  z-index: -1;
+  transform-origin: left center;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .nav-desktop-layer {
@@ -111,6 +127,7 @@ img {
   color: #ffffff;
   position: relative;
   z-index: 1;
+  transition: transform 0.35s ease;
 }
 
 .brand-logo {
@@ -132,6 +149,31 @@ img {
   font-size: 0.95rem;
   position: relative;
   z-index: 1;
+  transition:
+    opacity 0.08s linear,
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1) 0.08s,
+    gap 0.35s ease 0.08s;
+}
+
+@media (min-width: 769px) {
+  .nav.is-scrolled .nav-inner {
+    padding-right: 1.05rem;
+    gap: 0.8rem;
+    border-radius: 9999px;
+    justify-content: flex-start;
+  }
+
+  .nav.is-scrolled .nav-inner::before {
+    transform: scaleX(0.24);
+    border-radius: 9999px;
+  }
+
+  .nav.is-scrolled .nav-links {
+    transform: translateX(-10px);
+    opacity: 0;
+    pointer-events: none;
+    gap: 0;
+  }
 }
 
 .nav-links a {
@@ -329,12 +371,22 @@ img {
   overflow: hidden;
 }
 
+.hero-photo {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  max-height: 640px;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+}
+
 .hero-art::before {
   content: "";
   position: absolute;
   inset: -40% auto auto -20%;
-  width: 260px;
-  height: 260px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(228, 127, 254, 0.25), transparent 70%);
 }
@@ -434,7 +486,7 @@ img {
 }
 
 .manifesto {
-  background: linear-gradient(135deg, rgba(117, 197, 216, 0.3), rgba(134, 221, 204, 0.35));
+  background: linear-gradient(135deg, rgba(117, 196, 216, 0.637), rgba(134, 221, 204, 0.507));
   border-radius: 32px;
   padding: 2.5rem;
   box-shadow: var(--shadow);
@@ -595,6 +647,218 @@ img {
   font-size: 0.95rem;
 }
 
+.test-image-bg {
+  min-height: 100vh;
+  background-color: transparent;
+  background-image: url("/bg-blu.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+body:has(.test-image-bg) {
+  background: #0b8aa8 url("/bg.svg") no-repeat center top / cover;
+}
+
+body:has(.test-image-bg) .page.test-image-bg {
+  background: transparent;
+}
+
+body:has(.test-image-bg) .nav-desktop-layer {
+  background: transparent;
+  box-shadow: none;
+}
+
+.test-image-bg .hero,
+.test-image-bg .section,
+.test-image-bg .footer {
+  position: relative;
+  z-index: 1;
+}
+
+.test-image-bg .hero {
+  background: transparent;
+}
+
+.test-image-bg .hero-art {
+  padding: 0.55rem;
+  border-radius: 22px;
+}
+
+.test-image-bg .hero-photo {
+  border-radius: 16px;
+}
+
+.test-image-bg .hero-inner,
+.test-image-bg .section-inner {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 28px;
+  padding: clamp(1rem, 2vw, 2rem);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+.test-image-bg .hero-title,
+.test-image-bg .section-title,
+.test-image-bg .footer,
+.test-image-bg .hero-text,
+.test-image-bg .section-subtitle {
+  color: #103f49;
+}
+
+.test-image-bg .hero-title span {
+  color: #0b8aa8;
+}
+
+.test-image-bg .badge {
+  background: rgba(11, 138, 168, 0.88);
+  color: #ffffff;
+}
+
+.test-image-bg .button-secondary {
+  background: rgba(16, 63, 73, 0.9);
+  color: #ffffff;
+  border-color: rgba(16, 63, 73, 0.9);
+}
+
+.test-image-bg .footer {
+  margin-top: auto;
+  background: rgba(8, 56, 68, 0.92);
+  color: #eaf8fc;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.test-footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 0.9rem;
+}
+
+.test-footer-main {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.test-footer-brand {
+  margin: 0;
+  font-weight: 700;
+}
+
+.test-footer-grid {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.test-footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0;
+  color: #eaf8fc;
+}
+
+.test-footer-address {
+  opacity: 0.95;
+}
+
+.test-footer-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  justify-content: center;
+}
+
+.test-footer-socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #eaf8fc;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+}
+
+.test-footer-collabs {
+  width: min(100%, 380px);
+  margin-top: 0;
+  text-align: right;
+  justify-self: end;
+}
+
+.test-footer-collabs-title {
+  margin: 0 0 0.8rem;
+  font-weight: 700;
+  color: #eaf8fc;
+}
+
+.test-footer-collabs-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  justify-items: center;
+  column-gap: 7rem;
+  row-gap: 1rem;
+}
+
+.test-footer-collab-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  color: #eaf8fc;
+}
+
+.test-footer-collab-item.format-square,
+.test-footer-collab-item.format-wide,
+.test-footer-collab-item.format-tall {
+  grid-column: span 1;
+}
+
+.test-footer-collab-logo-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 8px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.test-footer-collab-item.format-wide .test-footer-collab-logo-wrap {
+  width: 90px;
+  height: 52px;
+}
+
+.test-footer-collab-item.format-square .test-footer-collab-logo-wrap {
+  width: 60px;
+  height: 60px;
+}
+
+.test-footer-collab-item.format-tall .test-footer-collab-logo-wrap {
+  width: 46px;
+  height: 66px;
+}
+
+.test-footer-collab-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 0;
+  background: transparent;
+}
+
+.test-footer-collab-name {
+  line-height: 1.25;
+}
+
 @media (min-width: 900px) {
   .hero-inner {
     grid-template-columns: 1.1fr 0.9fr;
@@ -611,7 +875,7 @@ img {
   }
 
   .nav-inner {
-    border-radius: 24px;
+    border-radius: 999px;
     padding: 0.9rem 1.1rem;
     gap: 1rem;
   }
@@ -646,7 +910,7 @@ img {
     align-items: center;
     justify-content: space-between;
     flex-wrap: nowrap;
-    border-radius: 22px;
+    border-radius: 999px;
     overflow: visible;
     padding-right: 3.8rem;
     z-index: 2;
@@ -815,6 +1079,58 @@ img {
     font-size: 0.9rem;
   }
 
+  .test-footer-socials {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: stretch;
+  }
+
+  .test-footer-socials a {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .test-footer-collabs-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-items: center;
+    gap: 0.85rem;
+  }
+
+  .test-footer-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .test-footer-main {
+    order: 1;
+  }
+
+  .test-footer-collabs {
+    order: 2;
+    text-align: left;
+    justify-self: stretch;
+  }
+
+  .test-footer-collab-item.format-wide,
+  .test-footer-collab-item.format-square,
+  .test-footer-collab-item.format-tall {
+    grid-column: span 1;
+  }
+
+  .test-footer-collab-item.format-wide .test-footer-collab-logo-wrap {
+    width: 78px;
+    height: 46px;
+  }
+
+  .test-footer-collab-item.format-square .test-footer-collab-logo-wrap {
+    width: 52px;
+    height: 52px;
+  }
+
+  .test-footer-collab-item.format-tall .test-footer-collab-logo-wrap {
+    width: 40px;
+    height: 58px;
+  }
+
   .linkhub-grid {
     grid-template-columns: 1fr;
   }
@@ -851,5 +1167,10 @@ img {
   .contact-address {
     display: flex;
     align-items: flex-start;
+  }
+
+  .test-image-bg {
+    background-size: cover;
+    background-position: center top;
   }
 }
