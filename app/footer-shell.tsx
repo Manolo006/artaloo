@@ -42,7 +42,7 @@ const collaborations = [
   {
     href: "https://cittadellarte.it/it",
     label: "Cittadellarte / Fondazione Pistoletto",
-    logo: "./collaboratori/fondazione pistoletto logo.jpg",
+    logo: "/collaboratori/fondazione pistoletto logo.jpg",
     format: "wide",
   },
 ];

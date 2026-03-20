@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import TrailingSlashRedirect from "./trailing-slash-redirect";
 
 export const metadata: Metadata = {
   title: "ARTALO",
@@ -42,6 +43,7 @@ const socialLinks = [
 export default function LinkHubPage() {
   return (
     <div className="page linkhub-page">
+      <TrailingSlashRedirect />
       <section className="section linkhub-section">
         <div className="section-inner linkhub-inner">
           <Link href="/" className="linkhub-logo" aria-label="Torna alla home">
