@@ -12,7 +12,7 @@ import {
 } from "react-icons/fa";
 
 export const metadata: Metadata = {
-  title: "Contatti | ARTALO",
+  title: "ARTALO",
   description:
     "Contatta ARTALO: email, telefono, social e indicazioni per raggiungerci a Bracciano.",
 };
