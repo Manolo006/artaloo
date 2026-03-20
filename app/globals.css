@@ -845,15 +845,15 @@ img {
 }
 
 body:has(.page-bg-blue) {
-  background: #0b8aa8 url("/background/bg-blu.svg") no-repeat center top / cover;
+  background: #0b8aa8 url("./background/bg-blu.svg") no-repeat center top / cover;
 }
 
 body:has(.page-bg-green) {
-  background: #3f8b76 url("/background/bg-verde.svg") no-repeat center top / cover;
+  background: #3f8b76 url("./background/bg-verde.svg") no-repeat center top / cover;
 }
 
 body:has(.page-bg-viola) {
-  background: #6d5a9e url("/background/bg-viola.svg") no-repeat center top / cover;
+  background: #6d5a9e url("./background/bg-viola.svg") no-repeat center top / cover;
 }
 
 body:has(.page-bg-blue) .page.page-bg-blue,
