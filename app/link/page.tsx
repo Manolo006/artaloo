@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import fbImage from "./link/fb.png";
-import igImage from "./link/ig.png";
-import ttImage from "./link/tt.png";
-import ytImage from "./link/yt.png";
-import wpImage from "./link/wp.png";
-import gmailImage from "./link/gmail.png";
+import fbImage from "../../public/link/fb.png";
+import igImage from "../../public/link/ig.png";
+import ttImage from "../../public/link/tt.png";
+import ytImage from "../../public/link/yt.png";
+import wpImage from "../../public/link/wp.png";
+import gmailImage from "../../public/link/gmail.png";
 
 export const metadata: Metadata = {
   title: "Link | ARTALO",
