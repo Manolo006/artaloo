@@ -1,15 +1,8 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
-import fbImage from "../public/link/fb.png";
-import igImage from "../public/link/ig.png";
-import ttImage from "../public/link/tt.png";
-import ytImage from "../public/link/yt.png";
-import wpImage from "../public/link/wp.png";
-import gmailImage from "../public/link/gmail.png";
 
 export const metadata: Metadata = {
-  title: "Link | ARTALO",
+  title: "ARTALO",
   description: "Raccolta rapida dei link social e contatti ARTALO.",
 };
 
@@ -17,32 +10,32 @@ const socialLinks = [
   {
     href: "https://www.facebook.com/artalo.lab",
     label: "Facebook",
-    imageSrc: fbImage,
+    imageSrc: "./link/fb.png",
   },
   {
     href: "https://www.instagram.com/artalolab__",
     label: "Instagram",
-    imageSrc: igImage,
+    imageSrc: "./link/ig.png",
   },
   {
     href: "https://www.tiktok.com/@artalolab",
     label: "TikTok",
-    imageSrc: ttImage,
+    imageSrc: "./link/tt.png",
   },
   {
     href: "https://www.youtube.com/@Artaloartalo",
     label: "YouTube",
-    imageSrc: ytImage,
+    imageSrc: "./link/yt.png",
   },
   {
     href: "https://wa.me/3392530535",
     label: "WhatsApp",
-    imageSrc: wpImage,
+    imageSrc: "./link/wp.png",
   },
   {
     href: "https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=artalo.lab@gmail.com",
     label: "Email",
-    imageSrc: gmailImage,
+    imageSrc: "./link/gmail.png",
   },
 ];
 
@@ -67,13 +60,7 @@ export default function LinkHubPage() {
                 rel="noreferrer"
                 aria-label={label}
               >
-                <Image
-                  src={imageSrc}
-                  alt={label}
-                  width={128}
-                  height={128}
-                  className="linkhub-item-image"
-                />
+                <img src={imageSrc} alt={label} className="linkhub-item-image" />
               </a>
             ))}
           </div>
