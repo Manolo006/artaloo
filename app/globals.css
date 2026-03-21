@@ -904,6 +904,23 @@ body:has(.page-bg-viola) .page.page-bg-viola {
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
 }
 
+.page-bg-blue .contact,
+.page-bg-green .contact,
+.page-bg-viola .contact {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+.page-contatti .section-inner {
+  background: #ffffffa9;
+  border: 1px solid rgba(182, 107, 174, 0.22);
+}
+
+.page-contatti .contact {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(182, 107, 174, 0.22);
+}
+
 .page-bg-blue .hero-title,
 .page-bg-blue .section-title,
 .page-bg-blue .footer,
