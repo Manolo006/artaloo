@@ -3,18 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: false,
+  skipTrailingSlashRedirect: true,
 };
-
-module.exports = {
-  async redirects() {
-    return [
-      {
-        source: '/artaloo/link/',
-        destination: '/artaloo/link',
-        permanent: true,
-      },
-    ]
-  },
-}
 
 export default nextConfig;
