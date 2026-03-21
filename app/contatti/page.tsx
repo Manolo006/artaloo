@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import {
   FaEnvelope,
   FaPhone,
@@ -55,10 +54,9 @@ const contactLinks = [
     icon: FaYoutube,
   },
   {
-    href: "/link",
+    href: "./link/",
     label: "Tutti i link",
     icon: FaLink,
-    internal: true,
   },
 ];
 
@@ -100,31 +98,19 @@ export default function ContattiPage() {
               workshop e nuove opere.
             </p>
             <div className="contact-links-grid">
-              {contactLinks.map(({ href, label, icon: Icon, internal }) =>
-                internal ? (
-                  <Link
-                    key={label}
-                    href={href}
-                    className="contact-link-item"
-                    aria-label={label}
-                  >
-                    <Icon />
-                    <span>{label}</span>
-                  </Link>
-                ) : (
-                  <a
-                    key={label}
-                    href={href}
-                    className="contact-link-item"
-                    target={href.startsWith("http") ? "_blank" : undefined}
-                    rel={href.startsWith("http") ? "noreferrer" : undefined}
-                    aria-label={label}
-                  >
-                    <Icon />
-                    <span>{label}</span>
-                  </a>
-                ),
-              )}
+              {contactLinks.map(({ href, label, icon: Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  className="contact-link-item"
+                  target={href.startsWith("http") ? "_blank" : undefined}
+                  rel={href.startsWith("http") ? "noreferrer" : undefined}
+                  aria-label={label}
+                >
+                  <Icon />
+                  <span>{label}</span>
+                </a>
+              ))}
             </div>
           </article>
         </div>
