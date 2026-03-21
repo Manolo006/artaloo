@@ -54,7 +54,7 @@ const contactLinks = [
     icon: FaYoutube,
   },
   {
-    href: "./link/",
+    href: "/link",
     label: "Tutti i link",
     icon: FaLink,
   },

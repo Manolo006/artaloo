@@ -6,8 +6,15 @@ export default function TrailingSlashRedirect() {
   useEffect(() => {
     const { pathname, search, hash } = window.location;
 
-    if (pathname.endsWith("/link/")) {
-      const normalizedPath = pathname.replace(/\/$/, "");
+    let normalizedPath = pathname
+      .replace(/\/index\.html$/i, "")
+      .replace(/\/+$/, "");
+
+    if (normalizedPath === "") {
+      normalizedPath = "/";
+    }
+
+    if (normalizedPath !== pathname) {
       window.location.replace(`${normalizedPath}${search}${hash}`);
     }
   }, []);
