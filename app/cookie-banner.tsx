@@ -86,12 +86,8 @@ export default function CookieBanner() {
           .
         </p>
 
-        <button
-          className="cookie-banner-more"
-          type="button"
-          onClick={() => setConsent("rejected")}
-        >
-          Più opzioni
+        <button className="cookie-banner-more" type="button" onClick={() => setConsent("rejected")}>
+          Rifiuta
         </button>
         <button className="cookie-banner-accept" type="button" onClick={() => setConsent("accepted")}>
           Accetta

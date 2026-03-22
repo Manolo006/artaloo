@@ -75,7 +75,7 @@ export default function PrivacyPage() {
             </p>
           </section>
 
-          <section>
+          <section id="cookie">
             <h2>6. Cookie</h2>
             <p>
               Il sito utilizza cookie tecnici necessari al funzionamento. Eventuali cookie
