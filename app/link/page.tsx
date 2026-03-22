@@ -114,44 +114,44 @@ export default function LinkClient() {
   };
 
   return (
-    <div className="page page-bg-mixed testlink-page">
-      <section className="section testlink-section">
-        <div className="section-inner testlink-inner">
-          <Link href="/" className="testlink-logo" aria-label="Torna alla home">
+    <div className="page page-bg-mixed linkpage-page">
+      <section className="section linkpage-section">
+        <div className="section-inner linkpage-inner">
+          <Link href="/" className="linkpage-logo" aria-label="Torna alla home">
             <img src="./logo.svg" alt="Logo ARTALO" />
             <span className="brand-logo">ARTALO</span>
           </Link>
 
-          <div className="testlink-hero">
-            <p className="testlink-kicker">Seguici e contattaci</p>
-            <h1 className="testlink-title">Tutti i canali ARTALO in un unico posto</h1>
-            <p className="testlink-subtitle">
+          <div className="linkpage-hero">
+            <p className="linkpage-kicker">Seguici e contattaci</p>
+            <h1 className="linkpage-title">Tutti i canali ARTALO in un unico posto</h1>
+            <p className="linkpage-subtitle">
               Scegli la piattaforma che preferisci: social, messaggi diretti o email.
             </p>
           </div>
 
-          <div className="testlink-grid">
+          <div className="linkpage-grid">
             {socialLinks.map((item) => {
               const Icon = item.icon;
 
               return (
-                <article key={item.label} className={`testlink-card ${item.tone}`}>
-                  <div className="testlink-card-head">
-                    <span className="testlink-card-icon" aria-hidden="true">
+                <article key={item.label} className={`linkpage-card ${item.tone}`}>
+                  <div className="linkpage-card-head">
+                    <span className="linkpage-card-icon" aria-hidden="true">
                       <Icon />
                     </span>
 
                     <div>
-                      <h2 className="testlink-card-title">{item.label}</h2>
-                      <p className="testlink-card-text">{item.description}</p>
+                      <h2 className="linkpage-card-title">{item.label}</h2>
+                      <p className="linkpage-card-text">{item.description}</p>
                     </div>
                   </div>
 
                   {item.kind === "email" ? (
-                    <div className="testlink-email-actions">
+                    <div className="linkpage-email-actions">
                       <button
                         type="button"
-                        className="testlink-card-button"
+                        className="linkpage-card-button"
                         onClick={() => handleCopyEmail(item.email)}
                       >
                         Copia email
@@ -162,7 +162,7 @@ export default function LinkClient() {
                         target="_blank"
                         rel="noreferrer"
                         aria-label="Apri Gmail per inviare una email"
-                        className="testlink-card-button"
+                        className="linkpage-card-button"
                       >
                         Apri Gmail
                       </a>
@@ -173,7 +173,7 @@ export default function LinkClient() {
                       target="_blank"
                       rel="noreferrer"
                       aria-label={`Apri ${item.label}`}
-                      className="testlink-card-button"
+                      className="linkpage-card-button"
                     >
                       Apri {item.label}
                     </a>
@@ -186,7 +186,7 @@ export default function LinkClient() {
       </section>
 
       {copyMessage ? (
-        <div className="testlink-toast" role="status" aria-live="polite">
+        <div className="linkpage-toast" role="status" aria-live="polite">
           {copyMessage}
         </div>
       ) : null}

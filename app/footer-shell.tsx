@@ -50,27 +50,27 @@ const collaborations = [
 
 export default function FooterShell() {
   return (
-    <footer className="footer test-footer">
-      <div className="test-footer-inner">
-        <div className="test-footer-main">
-          <p className="test-footer-brand">
+    <footer className="footer site-footer">
+      <div className="site-footer-inner">
+        <div className="site-footer-main">
+          <p className="site-footer-brand">
             ARTALO · Recupero creativo, sostenibilità e design etico.
           </p>
-          <div className="test-footer-grid">
+          <div className="site-footer-grid">
             <a
               href="https://mail.google.com/mail/?view=cm&fs=1&to=artalo.lab@gmail.com"
-              className="test-footer-link"
+              className="site-footer-link"
               target="_blank"
               rel="noreferrer"
             >
               <FaEnvelope /> artalo.lab@gmail.com
             </a>
-            <a href="tel:+393392530535" className="test-footer-link">
+            <a href="tel:+393392530535" className="site-footer-link">
               <FaPhone /> +39 339 253 0535
             </a>
             <a
               href="https://www.google.com/maps?q=Via+Valle+della+Foresta+6,+Bracciano+RM"
-              className="test-footer-link test-footer-address"
+              className="site-footer-link site-footer-address"
               target="_blank"
               rel="noreferrer"
             >
@@ -78,7 +78,7 @@ export default function FooterShell() {
             </a>
           </div>
 
-          <div className="test-footer-socials">
+          <div className="site-footer-socials">
             <a
               href="https://www.instagram.com/artalolab__"
               target="_blank"
@@ -110,24 +110,24 @@ export default function FooterShell() {
           </div>
         </div>
 
-        <div className="test-footer-collabs">
-          <p className="test-footer-collabs-title">Collaborazioni</p>
-          <div className="test-footer-collabs-grid">
+        <div className="site-footer-collabs">
+          <p className="site-footer-collabs-title">Collaborazioni</p>
+          <div className="site-footer-collabs-grid">
             {collaborations.map(({ href, label, logo, format }) => (
               <a
                 key={label}
                 href={href}
                 target="_blank"
                 rel="noreferrer"
-                className={`test-footer-collab-item format-${format}`}
+                className={`site-footer-collab-item format-${format}`}
               >
-                <span className="test-footer-collab-logo-wrap">
-                  <img src={logo} alt={label} className="test-footer-collab-logo" />
+                <span className="site-footer-collab-logo-wrap">
+                  <img src={logo} alt={label} className="site-footer-collab-logo" />
                 </span>
               </a>
             ))}
           </div>
-          <p className="test-footer-privacy">
+          <p className="site-footer-privacy">
             <Link href="/privacy">Informativa sulla Privacy</Link>
           </p>
         </div>
