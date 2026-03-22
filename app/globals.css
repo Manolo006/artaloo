@@ -1021,7 +1021,7 @@ img {
 .testlink-card {
   text-align: left;
   background: linear-gradient(160deg, #ffffff, #edf8fc);
-  border: 1px solid #79c6d7;
+  border: 1px solid #edf8fc;
   border-radius: 20px;
   padding: 1rem;
   box-shadow: 0 10px 24px rgba(0, 135, 169, 0.09);
@@ -1102,7 +1102,7 @@ img {
 
 .testlink-card.is-facebook {
   background: linear-gradient(155deg, #2b6df6, #7aa8ff);
-  border-color: #1f5edd;
+  border-color: #2b6df6;
 }
 
 .testlink-card.is-instagram .testlink-card-icon {
@@ -1111,7 +1111,7 @@ img {
 
 .testlink-card.is-instagram {
   background: linear-gradient(155deg, #d62976, #f9a03f);
-  border-color: #c21f66;
+  border-color: #d62976;
 }
 
 .testlink-card.is-tiktok .testlink-card-icon {
@@ -1120,7 +1120,7 @@ img {
 
 .testlink-card.is-tiktok {
   background: linear-gradient(155deg, #111827, #00cfd0);
-  border-color: #0f1524;
+  border-color: #111827;
 }
 
 .testlink-card.is-tiktok .testlink-card-title,
@@ -1144,7 +1144,7 @@ img {
 
 .testlink-card.is-youtube {
   background: linear-gradient(155deg, #d91f1f, #ff5a5a);
-  border-color: #c61b1b;
+  border-color: #d91f1f;
 }
 
 .testlink-card.is-whatsapp .testlink-card-icon {
@@ -1153,7 +1153,7 @@ img {
 
 .testlink-card.is-whatsapp {
   background: linear-gradient(155deg, #16a34a, #4ade80);
-  border-color: #11873d;
+  border-color: #16a34a;
 }
 
 .testlink-card.is-email .testlink-card-icon {
@@ -1162,7 +1162,7 @@ img {
 
 .testlink-card.is-email {
   background: linear-gradient(155deg, #7c3aed, #b06cff);
-  border-color: #6f31dd;
+  border-color: #7c3aed;
 }
 
 .testlink-card.is-facebook .testlink-card-title,
