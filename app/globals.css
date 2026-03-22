@@ -825,6 +825,273 @@ img {
   height: auto;
 }
 
+.testlink-page {
+  background:
+    radial-gradient(circle at 8% 4%, rgba(228, 127, 254, 0.28), transparent 35%),
+    radial-gradient(circle at 92% 12%, rgba(117, 197, 216, 0.4), transparent 36%),
+    radial-gradient(circle at 52% 100%, rgba(134, 221, 204, 0.45), transparent 48%),
+    linear-gradient(170deg, #f8fdff 0%, #eaf7fb 55%, #e2f1f7 100%);
+}
+
+.testlink-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 110px);
+}
+
+.testlink-inner {
+  width: 100%;
+  max-width: 960px;
+  text-align: center;
+}
+
+.testlink-hero {
+  margin-top: 1rem;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.05rem 1.15rem 1.15rem;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #0c5165, #16708d);
+  border: 1px solid #7fd0e3;
+  box-shadow: 0 14px 30px rgba(3, 46, 58, 0.26);
+}
+
+.testlink-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(0, 135, 169, 0.2);
+  border-radius: 999px;
+  padding: 0.52rem 1rem;
+  box-shadow: 0 10px 24px rgba(0, 135, 169, 0.14);
+}
+
+.testlink-logo img {
+  width: 30px;
+  height: 28px;
+}
+
+.testlink-kicker {
+  margin: 0 0 0.48rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.77rem;
+  font-weight: 700;
+  color: #c2f3ff;
+}
+
+.testlink-title {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-family: var(--font-edo), var(--font-geist-sans), sans-serif;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  line-height: 1.1;
+  text-shadow: 0 3px 16px rgba(0, 0, 0, 0.25);
+}
+
+.testlink-subtitle {
+  margin: 0.95rem auto 0;
+  max-width: 620px;
+  color: #e8f8ff;
+  line-height: 1.75;
+}
+
+.testlink-grid {
+  margin-top: 1.9rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.testlink-card {
+  text-align: left;
+  background: linear-gradient(160deg, #ffffff, #edf8fc);
+  border: 1px solid #79c6d7;
+  border-radius: 20px;
+  padding: 1rem;
+  box-shadow: 0 10px 24px rgba(0, 135, 169, 0.09);
+  display: grid;
+  gap: 0.95rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.testlink-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(0, 135, 169, 0.14);
+}
+
+.testlink-card-head {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 0.8rem;
+}
+
+.testlink-card-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.1rem;
+  background: linear-gradient(135deg, #178fab, #54bfd4);
+  box-shadow: 0 8px 18px rgba(0, 135, 169, 0.24);
+}
+
+.testlink-card-title {
+  margin: 0;
+  color: #103f49;
+  font-size: 1.1rem;
+}
+
+.testlink-card-text {
+  margin: 0.35rem 0 0;
+  color: #2b6770;
+  line-height: 1.55;
+  font-size: 0.95rem;
+}
+
+.testlink-card-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.7rem 0.95rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(20, 151, 178, 0.22), rgba(85, 188, 204, 0.22));
+  border: 1px solid rgba(0, 135, 169, 0.3);
+  color: #0a4250;
+  font-weight: 700;
+  font-size: 0.95rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.testlink-email-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.55rem;
+}
+
+.testlink-card-button:hover {
+  background: rgba(0, 135, 169, 0.16);
+  border-color: rgba(0, 135, 169, 0.38);
+}
+
+.testlink-card.is-facebook .testlink-card-icon {
+  background: linear-gradient(135deg, #2563eb, #4f8dff);
+}
+
+.testlink-card.is-facebook {
+  background: linear-gradient(155deg, #2b6df6, #7aa8ff);
+  border-color: #1f5edd;
+}
+
+.testlink-card.is-instagram .testlink-card-icon {
+  background: linear-gradient(135deg, #e1306c, #f58529);
+}
+
+.testlink-card.is-instagram {
+  background: linear-gradient(155deg, #d62976, #f9a03f);
+  border-color: #c21f66;
+}
+
+.testlink-card.is-tiktok .testlink-card-icon {
+  background: linear-gradient(135deg, #111827, #00d2d3);
+}
+
+.testlink-card.is-tiktok {
+  background: linear-gradient(155deg, #111827, #00cfd0);
+  border-color: #0f1524;
+}
+
+.testlink-card.is-tiktok .testlink-card-title,
+.testlink-card.is-tiktok .testlink-card-text {
+  color: #f2fbff;
+}
+
+.testlink-card.is-tiktok .testlink-card-button {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.34);
+  color: #f5fcff;
+}
+
+.testlink-card.is-tiktok .testlink-card-button:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.testlink-card.is-youtube .testlink-card-icon {
+  background: linear-gradient(135deg, #dc2626, #ef4444);
+}
+
+.testlink-card.is-youtube {
+  background: linear-gradient(155deg, #d91f1f, #ff5a5a);
+  border-color: #c61b1b;
+}
+
+.testlink-card.is-whatsapp .testlink-card-icon {
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+}
+
+.testlink-card.is-whatsapp {
+  background: linear-gradient(155deg, #16a34a, #4ade80);
+  border-color: #11873d;
+}
+
+.testlink-card.is-email .testlink-card-icon {
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+}
+
+.testlink-card.is-email {
+  background: linear-gradient(155deg, #7c3aed, #b06cff);
+  border-color: #6f31dd;
+}
+
+.testlink-card.is-facebook .testlink-card-title,
+.testlink-card.is-facebook .testlink-card-text,
+.testlink-card.is-instagram .testlink-card-title,
+.testlink-card.is-instagram .testlink-card-text,
+.testlink-card.is-youtube .testlink-card-title,
+.testlink-card.is-youtube .testlink-card-text,
+.testlink-card.is-whatsapp .testlink-card-title,
+.testlink-card.is-whatsapp .testlink-card-text,
+.testlink-card.is-email .testlink-card-title,
+.testlink-card.is-email .testlink-card-text {
+  color: #ffffff;
+}
+
+.testlink-card.is-facebook .testlink-card-button,
+.testlink-card.is-instagram .testlink-card-button,
+.testlink-card.is-youtube .testlink-card-button,
+.testlink-card.is-whatsapp .testlink-card-button,
+.testlink-card.is-email .testlink-card-button {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.45);
+  color: #ffffff;
+}
+
+.testlink-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 1.4rem;
+  transform: translateX(-50%);
+  z-index: 60;
+  background: #0c5165;
+  color: #ffffff;
+  border: 1px solid #8ad8eb;
+  border-radius: 999px;
+  padding: 0.62rem 1rem;
+  font-weight: 700;
+  box-shadow: 0 10px 22px rgba(6, 46, 58, 0.32);
+}
+
 .footer {
   padding: 2rem 5vw 3rem;
   color: #1f5f66;
@@ -858,7 +1125,7 @@ body:has(.page-bg-viola) {
 }
 
 body:has(.page-bg-mixed) {
-  background: #3a7f90 url("../public/background/bg-mixed.svg") no-repeat center top / 100% auto;
+  background: #0b8aa8 url("../public/background/bg-mixed.svg") no-repeat center top / 100% auto;
 }
 
 body:has(.page-bg-blue) .page.page-bg-blue,
@@ -978,6 +1245,23 @@ body:has(.page-bg-blue) .footer.test-footer {
   border-top: 1px solid rgba(255, 255, 255, 0.25);
 }
 
+body:has(.page-bg-mixed) .footer.test-footer {
+  margin-top: auto;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8, 56, 68, 0.82) 0%,
+      rgba(11, 138, 168, 0.74) 33.33%,
+      rgba(19, 78, 61, 0.84) 33.33%,
+      rgba(63, 139, 118, 0.74) 66.66%,
+      rgba(74, 61, 107, 0.84) 66.66%,
+      rgba(109, 90, 158, 0.74) 100%
+    );
+  backdrop-filter: blur(5px);
+  color: #f4fbff;
+  border-top: 1px solid rgba(255, 255, 255, 0.32);
+}
+
 body:has(.page-bg-green) .footer.test-footer {
   margin-top: auto;
   background: linear-gradient(
@@ -994,8 +1278,8 @@ body:has(.page-bg-viola) .footer.test-footer {
   margin-top: auto;
   background: linear-gradient(
     135deg,
-    rgba(148, 58, 133, 0.84),
-    rgba(226, 116, 188, 0.76)
+    rgba(74, 61, 107, 0.84),
+    rgba(109, 90, 158, 0.74)
   );
   backdrop-filter: blur(5px);
   color: #fff0f8;
@@ -1477,6 +1761,103 @@ body:has(.page-bg-viola) .footer.test-footer {
   .linkhub-section {
     min-height: auto;
   }
+
+  .testlink-section {
+    min-height: auto;
+    padding-top: 1.1rem;
+    padding-bottom: 1.6rem;
+  }
+
+  .testlink-inner {
+    padding-left: 0.15rem;
+    padding-right: 0.15rem;
+  }
+
+  .testlink-logo {
+    padding: 0.46rem 0.82rem;
+    gap: 0.55rem;
+  }
+
+  .testlink-logo img {
+    width: 26px;
+    height: 24px;
+  }
+
+  .testlink-hero {
+    margin-top: 0.75rem;
+    padding: 0.9rem 0.82rem 0.95rem;
+    border-radius: 14px;
+  }
+
+  .testlink-kicker {
+    letter-spacing: 0.12em;
+    font-size: 0.69rem;
+  }
+
+  .testlink-title {
+    line-height: 1.15;
+  }
+
+  .testlink-subtitle {
+    margin-top: 0.7rem;
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+
+  .testlink-grid {
+    grid-template-columns: 1fr;
+    gap: 0.72rem;
+    margin-top: 1rem;
+  }
+
+  .testlink-card {
+    padding: 0.82rem;
+    border-radius: 16px;
+    gap: 0.72rem;
+  }
+
+  .testlink-card-head {
+    gap: 0.58rem;
+  }
+
+  .testlink-card-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
+    font-size: 0.95rem;
+  }
+
+  .testlink-card-title {
+    font-size: 1rem;
+  }
+
+  .testlink-card-text {
+    margin-top: 0.25rem;
+    font-size: 0.88rem;
+    line-height: 1.45;
+  }
+
+  .testlink-card-button {
+    min-height: 42px;
+    padding: 0.62rem 0.78rem;
+    font-size: 0.88rem;
+    border-radius: 10px;
+  }
+
+  .testlink-email-actions {
+    grid-template-columns: 1fr;
+    gap: 0.45rem;
+  }
+
+  .testlink-toast {
+    width: calc(100% - 1.4rem);
+    max-width: 460px;
+    bottom: 0.85rem;
+    padding: 0.56rem 0.85rem;
+    font-size: 0.86rem;
+    text-align: center;
+    border-radius: 14px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1513,5 +1894,44 @@ body:has(.page-bg-viola) .footer.test-footer {
   .page-bg-viola {
     background-size: cover;
     background-position: center top;
+  }
+
+  .testlink-title {
+    font-size: clamp(1.45rem, 7.1vw, 1.82rem);
+  }
+
+  .testlink-subtitle {
+    font-size: 0.86rem;
+    line-height: 1.5;
+  }
+
+  .testlink-card-head {
+    gap: 0.5rem;
+  }
+
+  .testlink-card-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+  }
+
+  .testlink-card-title {
+    font-size: 0.96rem;
+  }
+
+  .testlink-card-text {
+    font-size: 0.84rem;
+  }
+
+  .testlink-card-button {
+    min-height: 40px;
+    font-size: 0.84rem;
+  }
+
+  .testlink-toast {
+    width: calc(100% - 1rem);
+    bottom: 0.65rem;
+    font-size: 0.82rem;
   }
 }
