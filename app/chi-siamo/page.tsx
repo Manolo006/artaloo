@@ -36,7 +36,7 @@ export default function ChiSiamoPage() {
             <p className="section-subtitle" style={{ maxWidth: "none", whiteSpace: "pre-line" }}>
               {`Artalo è una start up ideata e promossa da Martina Troiano; La quale dopo gli studi all'istituto d'arte di Napoli, ha conseguito una laurea in Scenografia per il Cinema e Teatro alla Wimbledon School of Art di Londra, incrementato con un Erasmus di sei mesi all'università del Teatro di Barcellona.
 
-Ha Lavorato sia nel cinema che nel teatro, sperimentando sempre più l’arte dell’ upcycling.
+Ha Lavorato sia nel cinema che nel teatro, sperimentando sempre più l’arte dell'upcycling.
 
 Oggi si definisce un’artivista, un’artigiana e con Artalo promuove la messa in opera di rinnovo e restyling di manufatti ripristinati da materiali destinati a discarica, oltre a creare opere d’arte realizzate esclusivamente con materiali di scarto, promotrici di messaggi di sensibilizzazione alla tutela ambientale.`}
             </p>
