@@ -23,7 +23,7 @@ const edoFont = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "ARTALO | Design da recupero creativo",
+  title: "ARTALO | Il modo bello di non sprecare!",
   description:
     "ARTALO è un progetto di sostenibilità e creatività che recupera rifiuti destinati alla discarica e li trasforma in prodotti di design unici.",
 };
