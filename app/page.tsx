@@ -17,7 +17,9 @@ export default function Home() {
               <FaRecycle /> Recupero creativo e sostenibilità
             </span>
             <h1 className="hero-title hero-title-edo">
-              <span>ARTALO</span> il modo bello di non sprecare.
+              <span className="hero-brand-ar">AR</span>
+              <span className="hero-brand-ta">TA</span>
+              <span className="hero-brand-lo">LO</span> il modo bello di non sprecare.
             </h1>
             <p className="hero-text">
               ARTALO è un progetto di sostenibilità e creatività che contribuisce

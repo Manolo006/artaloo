@@ -349,8 +349,16 @@ img {
   letter-spacing: 0.02em;
 }
 
-.hero-title span {
-  color: var(--primary);
+.hero-title .hero-brand-ar {
+  color: rgba(51, 158, 185, 1);
+}
+
+.hero-title .hero-brand-ta {
+  color: rgba(44, 159, 136, 1);
+}
+
+.hero-title .hero-brand-lo {
+  color: rgba(212, 118, 236, 1);
 }
 
 .hero-text {
@@ -1321,12 +1329,6 @@ body:has(.page-bg-mixed) .page.page-bg-mixed {
 .page-bg-viola .hero-text,
 .page-bg-viola .section-subtitle {
   color: #103f49;
-}
-
-.page-bg-blue .hero-title span,
-.page-bg-green .hero-title span,
-.page-bg-viola .hero-title span {
-  color: #0b8aa8;
 }
 
 .page-bg-blue .badge,
