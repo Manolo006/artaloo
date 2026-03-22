@@ -71,6 +71,43 @@ Per la sua forza espressiva e l’uso consapevole dei materiali, l’opera ha ri
   },
 ];
 
+const opereEmphasisTerms = [
+  "Materiali di recupero",
+  "materiali di scarto",
+  "microplastiche",
+  "plastica",
+  "corpo umano",
+  "specchio",
+  "singolarità",
+  "dimensione infinita",
+  "sostenibilità",
+  "riciclo",
+  "economia circolare",
+  "Primo Premio Categoria Artisti Professionisti",
+  "denuncia",
+  "fragilità",
+  "sviluppo sostenibile",
+];
+
+function emphasizeText(text: string) {
+  const escapedTerms = opereEmphasisTerms.map((term) =>
+    term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
+  );
+
+  const regex = new RegExp(`(${escapedTerms.join("|")})`, "gi");
+
+  return text
+    .split(regex)
+    .filter(Boolean)
+    .map((part, index) => {
+      const isMatch = opereEmphasisTerms.some(
+        (term) => term.toLowerCase() === part.toLowerCase(),
+      );
+
+      return isMatch ? <strong key={index}>{part}</strong> : part;
+    });
+}
+
 function OpereCarousel({ gallery, label }: { gallery: GalleryItem[]; label: string }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const total = gallery.length;
@@ -145,8 +182,8 @@ export default function OperePage() {
           <p className="section-kicker">Opere</p>
           <h1 className="section-title">Opere e collezioni ARTALO</h1>
           <p className="section-subtitle">
-            Ogni pezzo nasce da materiali recuperati e prende vita in collezioni
-            a tiratura limitata, pensate per ambienti poetici e sostenibili.
+            Ogni pezzo nasce da <strong>materiali recuperati</strong> e prende vita in collezioni
+            a tiratura limitata, pensate per ambienti poetici e <strong>sostenibili</strong>.
           </p>
           <div className="hero-actions">
             <Link className="button button-primary" href="/servizi">
@@ -171,7 +208,7 @@ export default function OperePage() {
               </div>
               <div className="opere-card-content">
                 <h3>{name}</h3>
-                <p>{description}</p>
+                <p>{emphasizeText(description)}</p>
               </div>
             </article>
           ))}

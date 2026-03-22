@@ -1554,6 +1554,21 @@ body:has(.page-bg-viola) .footer.test-footer {
   min-height: 320px;
 }
 
+.page-chi-siamo .chi-siamo-text-focus {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.page-chi-siamo .chi-siamo-inline-image {
+  width: min(100%, 460px);
+  min-height: 0;
+  height: 240px;
+  max-height: 240px;
+  object-fit: cover;
+  border-radius: 16px;
+  justify-self: end;
+}
+
 @media (max-width: 768px) {
   .page-chi-siamo .manifesto,
   .page-chi-siamo .card {
@@ -1568,6 +1583,13 @@ body:has(.page-bg-viola) .footer.test-footer {
   .page-chi-siamo .chi-siamo-image-card .hero-photo {
     min-height: 220px;
   }
+
+  .page-chi-siamo .chi-siamo-inline-image {
+    width: 100%;
+    height: 200px;
+    max-height: 200px;
+    justify-self: stretch;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1575,6 +1597,11 @@ body:has(.page-bg-viola) .footer.test-footer {
   .page-chi-siamo .chi-siamo-image-card .hero-photo {
     min-height: 180px;
     max-height: 260px;
+  }
+
+  .page-chi-siamo .chi-siamo-inline-image {
+    height: 170px;
+    max-height: 170px;
   }
 }
 

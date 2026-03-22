@@ -3,6 +3,38 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
+const eventiEmphasisTerms = [
+  "materiali di scarto",
+  "riciclo",
+  "sostenibilità",
+  "comunità",
+  "ARTALO",
+  "diversamente abili",
+  "salvaguardia degli ecosistemi marini",
+  "rispetto per la natura",
+  "creatività",
+  "spiaggia",
+];
+
+function emphasizeEventText(text: string) {
+  const escapedTerms = eventiEmphasisTerms.map((term) =>
+    term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
+  );
+
+  const regex = new RegExp(`(${escapedTerms.join("|")})`, "gi");
+
+  return text
+    .split(regex)
+    .filter(Boolean)
+    .map((part, index) => {
+      const isMatch = eventiEmphasisTerms.some(
+        (term) => term.toLowerCase() === part.toLowerCase(),
+      );
+
+      return isMatch ? <strong key={index}>{part}</strong> : part;
+    });
+}
+
 const eventiItems = [
   {
     slug: "workshop-creativi",
@@ -110,8 +142,8 @@ export default function EventiPage() {
           <p className="section-kicker">Eventi</p>
           <h1 className="section-title">Attività ARTALO</h1>
           <p className="section-subtitle">
-            Workshop, laboratori ed eventi sul territorio: recupero creativo,
-            sensibilizzazione ambientale e partecipazione attiva della comunità.
+            Workshop, laboratori ed eventi sul territorio: <strong>recupero creativo</strong>,
+            <strong> sensibilizzazione ambientale</strong> e partecipazione attiva della <strong>comunità</strong>.
           </p>
           <div className="hero-actions">
             <Link className="button button-primary" href="/opere">
@@ -133,7 +165,7 @@ export default function EventiPage() {
               </div>
               <div className="opere-card-content">
                 <h3>{name}</h3>
-                <p>{description}</p>
+                <p>{emphasizeEventText(description)}</p>
               </div>
             </article>
           ))}
