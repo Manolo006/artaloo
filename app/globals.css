@@ -1552,16 +1552,7 @@ body:has(.page-bg-blue) .footer.test-footer {
 
 body:has(.page-bg-mixed) .footer.test-footer {
   margin-top: auto;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(8, 56, 68, 0.82) 0%,
-      rgba(11, 138, 168, 0.74) 33.33%,
-      rgba(19, 78, 61, 0.84) 33.33%,
-      rgba(63, 139, 118, 0.74) 66.66%,
-      rgba(74, 61, 107, 0.84) 66.66%,
-      rgba(109, 90, 158, 0.74) 100%
-    );
+  background: linear-gradient(90deg, #0087a9 0%, #007f7f 50%, #8c5fd2 100%);
   backdrop-filter: blur(5px);
   color: #f4fbff;
   border-top: 1px solid rgba(255, 255, 255, 0.32);
