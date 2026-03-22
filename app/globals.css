@@ -1259,27 +1259,32 @@ body:has(.page-bg-mixed) .page.page-bg-mixed {
 .page-bg-green .hero,
 .page-bg-green .section,
 .page-bg-viola .hero,
-.page-bg-viola .section {
+.page-bg-viola .section,
+.page-bg-mixed .hero,
+.page-bg-mixed .section {
   position: relative;
   z-index: 1;
 }
 
 .page-bg-blue .hero,
 .page-bg-green .hero,
-.page-bg-viola .hero {
+.page-bg-viola .hero,
+.page-bg-mixed .hero {
   background: transparent;
 }
 
 .page-bg-blue .hero-art,
 .page-bg-green .hero-art,
-.page-bg-viola .hero-art {
+.page-bg-viola .hero-art,
+.page-bg-mixed .hero-art {
   padding: 0.55rem;
   border-radius: 22px;
 }
 
 .page-bg-blue .hero-photo,
 .page-bg-green .hero-photo,
-.page-bg-viola .hero-photo {
+.page-bg-viola .hero-photo,
+.page-bg-mixed .hero-photo {
   border-radius: 16px;
 }
 
@@ -1288,7 +1293,9 @@ body:has(.page-bg-mixed) .page.page-bg-mixed {
 .page-bg-green .hero-inner,
 .page-bg-green .section-inner,
 .page-bg-viola .hero-inner,
-.page-bg-viola .section-inner {
+.page-bg-viola .section-inner,
+.page-bg-mixed .hero-inner,
+.page-bg-mixed .section-inner {
   background: rgba(255, 255, 255, 0.78);
   border: 1px solid rgba(255, 255, 255, 0.55);
   border-radius: 28px;
@@ -1298,7 +1305,8 @@ body:has(.page-bg-mixed) .page.page-bg-mixed {
 
 .page-bg-blue .contact,
 .page-bg-green .contact,
-.page-bg-viola .contact {
+.page-bg-viola .contact,
+.page-bg-mixed .contact {
   background: rgba(255, 255, 255, 0.78);
   border: 1px solid rgba(255, 255, 255, 0.55);
 }
@@ -1327,20 +1335,27 @@ body:has(.page-bg-mixed) .page.page-bg-mixed {
 .page-bg-viola .section-title,
 .page-bg-viola .footer,
 .page-bg-viola .hero-text,
-.page-bg-viola .section-subtitle {
+.page-bg-viola .section-subtitle,
+.page-bg-mixed .hero-title,
+.page-bg-mixed .section-title,
+.page-bg-mixed .footer,
+.page-bg-mixed .hero-text,
+.page-bg-mixed .section-subtitle {
   color: #103f49;
 }
 
 .page-bg-blue .badge,
 .page-bg-green .badge,
-.page-bg-viola .badge {
+.page-bg-viola .badge,
+.page-bg-mixed .badge {
   background: rgba(11, 138, 168, 0.88);
   color: #ffffff;
 }
 
 .page-bg-blue .button-secondary,
 .page-bg-green .button-secondary,
-.page-bg-viola .button-secondary {
+.page-bg-viola .button-secondary,
+.page-bg-mixed .button-secondary {
   background: rgba(16, 63, 73, 0.9);
   color: #ffffff;
   border-color: rgba(16, 63, 73, 0.9);
