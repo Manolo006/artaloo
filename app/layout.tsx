@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import NavShell from "./nav-shell";
 import FooterShell from "./footer-shell";
+import CookieBanner from "./cookie-banner";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -41,6 +42,7 @@ export default function RootLayout({
         <NavShell />
         {children}
         <FooterShell />
+        <CookieBanner />
       </body>
     </html>
   );

@@ -1211,6 +1211,183 @@ img {
   box-shadow: 0 10px 22px rgba(6, 46, 58, 0.32);
 }
 
+.cookie-banner {
+  position: fixed;
+  left: auto;
+  right: 1.2rem;
+  bottom: 1rem;
+  z-index: 100;
+  width: min(80vw, 300px);
+  border-radius: 1rem;
+  background: #ffffff;
+  color: #52525b;
+  box-shadow:
+    rgba(60, 64, 67, 0.3) 0 1px 2px 0,
+    rgba(60, 64, 67, 0.15) 0 2px 6px 2px;
+}
+
+.cookie-banner-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  padding: 2.2rem 1.5rem 1.5rem;
+}
+
+.cookie-banner-icon {
+  position: relative;
+  margin: -3.4rem auto 1.7rem;
+}
+
+.cookie-banner-title {
+  margin: 0;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #3f3f46;
+}
+
+.cookie-banner-text {
+  width: 100%;
+  margin: 0 0 1rem;
+  font-size: 0.875rem;
+  text-align: justify;
+  line-height: 1.55;
+  color: #3f3f46;
+}
+
+.cookie-banner-link,
+.cookie-banner-more {
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  font-weight: 700;
+  color: #52525b;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+.cookie-banner-link:hover,
+.cookie-banner-more:hover {
+  color: #634647;
+}
+
+.cookie-banner-more {
+  margin-right: auto;
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+
+.cookie-banner-accept {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  border: 0;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  padding: 0.5rem 2rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #634647;
+  background: #ddad81;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.cookie-banner-accept:hover {
+  color: #ddad81;
+  background: #634647;
+}
+
+.privacy-page {
+  min-height: 100vh;
+  background: #f4f6f8;
+  color: #1f2937;
+  padding: 2.5rem 1.25rem 4rem;
+}
+
+.privacy-container {
+  width: min(920px, 100%);
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  overflow: hidden;
+}
+
+.privacy-header {
+  padding: 2.2rem 2rem 1.6rem;
+  border-bottom: 1px solid #e5e7eb;
+  background: linear-gradient(180deg, #ffffff, #fafafa);
+}
+
+.privacy-eyebrow {
+  margin: 0 0 0.6rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6b7280;
+  font-weight: 700;
+}
+
+.privacy-header h1 {
+  margin: 0;
+  font-size: clamp(1.75rem, 3.4vw, 2.35rem);
+  color: #111827;
+}
+
+.privacy-header p {
+  margin: 0.85rem 0 0;
+  line-height: 1.7;
+  color: #374151;
+}
+
+.privacy-updated {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.privacy-sections {
+  padding: 1.5rem 2rem 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.privacy-sections section {
+  padding: 1rem 0;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.privacy-sections section:last-child {
+  border-bottom: 0;
+}
+
+.privacy-sections h2 {
+  margin: 0 0 0.6rem;
+  font-size: 1.05rem;
+  color: #111827;
+}
+
+.privacy-sections p,
+.privacy-sections li {
+  margin: 0;
+  color: #374151;
+  line-height: 1.7;
+  font-size: 0.97rem;
+}
+
+.privacy-sections ul {
+  margin: 0.6rem 0 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
 .footer {
   padding: 2rem 5vw 3rem;
   color: #1f5f66;
@@ -1471,14 +1648,31 @@ body:has(.page-bg-viola) .footer.test-footer {
 .test-footer-collabs {
   width: min(100%, 380px);
   margin-top: 0;
-  text-align: right;
+  text-align: center;
   justify-self: end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .test-footer-collabs-title {
   margin: 0 0 0.8rem;
   font-weight: 700;
   color: #eaf8fc;
+  width: 100%;
+  text-align: center;
+}
+
+.test-footer-privacy {
+  margin: 1rem 0 0;
+  text-align: center;
+}
+
+.test-footer-privacy a {
+  color: #eaf8fc;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .test-footer-collabs-grid {
@@ -1888,8 +2082,13 @@ body:has(.page-bg-viola) .footer.test-footer {
 
   .test-footer-collabs {
     order: 2;
-    text-align: left;
+    text-align: center;
     justify-self: stretch;
+    align-items: center;
+  }
+
+  .test-footer-privacy {
+    text-align: center;
   }
 
   .test-footer-collab-item.format-wide,
@@ -2088,5 +2287,35 @@ body:has(.page-bg-viola) .footer.test-footer {
     width: calc(100% - 1rem);
     bottom: 0.65rem;
     font-size: 0.82rem;
+  }
+
+  .cookie-banner {
+    left: auto;
+    right: 0.65rem;
+    width: min(calc(100vw - 1.3rem), 300px);
+    bottom: 0.65rem;
+    border-radius: 14px;
+  }
+
+  .cookie-banner-inner {
+    padding: 2rem 1rem 1rem;
+  }
+
+  .cookie-banner-accept {
+    right: 1rem;
+    bottom: 1rem;
+    padding: 0.45rem 1.4rem;
+  }
+
+  .privacy-page {
+    padding: 1.25rem 0.7rem 2.5rem;
+  }
+
+  .privacy-header {
+    padding: 1.35rem 1.1rem 1.1rem;
+  }
+
+  .privacy-sections {
+    padding: 1rem 1.1rem 1.25rem;
   }
 }

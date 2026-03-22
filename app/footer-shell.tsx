@@ -7,6 +7,7 @@ import {
   FaTiktok,
   FaYoutube,
 } from "react-icons/fa";
+import Link from "next/link";
 
 const collaborations = [
   {
@@ -126,6 +127,9 @@ export default function FooterShell() {
               </a>
             ))}
           </div>
+          <p className="test-footer-privacy">
+            <Link href="/privacy">Informativa sulla Privacy</Link>
+          </p>
         </div>
       </div>
     </footer>
