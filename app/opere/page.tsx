@@ -66,7 +66,7 @@ Per la sua forza espressiva e l’uso consapevole dei materiali, l’opera ha ri
       { type: "image", src: "./opere/gabbia_del_potere/gabbia_finito.jpg", alt: "Gabbia del potere - opera finita" },
       { type: "image", src: "./opere/gabbia_del_potere/mappamondo.jpg", alt: "Gabbia del potere - dettaglio mappamondo" },
       { type: "image", src: "./opere/gabbia_del_potere/mano.jpg", alt: "Gabbia del potere - dettaglio mano" },
-      { type: "video", src: "./opere/gabbia_del_potere/mappamondo_gira.MOV", alt: "Gabbia del potere - video" },
+      { type: "video", src: "./opere/gabbia_del_potere/mappamondo_gira.mp4", alt: "Gabbia del potere - video" },
     ],
   },
 ];
@@ -150,7 +150,7 @@ function OpereCarousel({ gallery, label }: { gallery: GalleryItem[]; label: stri
           >
             {media.type === "video" ? (
               <video
-                className="opere-card-image"
+                className={`opere-card-image ${media.src.includes("mappamondo_gira.mp4") ? "opere-card-image-zoomed" : ""}`}
                 autoPlay
                 muted
                 loop

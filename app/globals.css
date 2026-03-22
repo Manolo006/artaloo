@@ -661,6 +661,11 @@ img {
   object-fit: cover;
 }
 
+.opere-card-image-zoomed {
+  transform: scale(1.50);
+  transform-origin: center;
+}
+
 .opere-card-content {
   padding: 1.8rem 1.9rem;
   display: grid;
