@@ -22,41 +22,49 @@ const contactLinks = [
     href: "https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=artalo.lab@gmail.com",
     label: "Email",
     icon: FaEnvelope,
+    socialClass: "is-email",
   },
   {
     href: "tel:+393392530535",
     label: "Telefono",
     icon: FaPhone,
+    socialClass: "is-phone",
   },
   {
     href: "https://wa.me/3392530535",
     label: "WhatsApp",
     icon: FaWhatsapp,
+    socialClass: "is-whatsapp",
   },
   {
     href: "https://www.instagram.com/artalolab__",
     label: "Instagram",
     icon: FaInstagram,
+    socialClass: "is-instagram",
   },
   {
     href: "https://www.tiktok.com/@artalolab",
     label: "TikTok",
     icon: FaTiktok,
+    socialClass: "is-tiktok",
   },
   {
     href: "https://www.facebook.com/artalo.lab",
     label: "Facebook",
     icon: FaFacebook,
+    socialClass: "is-facebook",
   },
   {
     href: "https://www.youtube.com/@Artaloartalo",
     label: "YouTube",
     icon: FaYoutube,
+    socialClass: "is-youtube",
   },
   {
     href: "./link",
     label: "Tutti i link",
     icon: FaLink,
+    socialClass: "is-all-links",
   },
 ];
 
@@ -98,11 +106,11 @@ export default function ContattiPage() {
               workshop e nuove opere.
             </p>
             <div className="contact-links-grid">
-              {contactLinks.map(({ href, label, icon: Icon }) => (
+              {contactLinks.map(({ href, label, icon: Icon, socialClass }) => (
                 <a
                   key={label}
                   href={href}
-                  className="contact-link-item"
+                  className={`contact-link-item ${socialClass ?? ""}`.trim()}
                   target={href.startsWith("http") ? "_blank" : undefined}
                   rel={href.startsWith("http") ? "noreferrer" : undefined}
                   aria-label={label}

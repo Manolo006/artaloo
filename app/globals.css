@@ -749,8 +749,13 @@ img {
   gap: 0.6rem;
   padding: 0.8rem 0.95rem;
   border-radius: 14px;
-  background: var(--surface-muted);
-  border: 1px solid rgba(0, 135, 169, 0.1);
+  border: 1px solid transparent;
+  background:
+    var(--contact-bg, var(--surface-muted)) padding-box,
+    var(
+      --contact-border-gradient,
+      linear-gradient(135deg, rgba(0, 135, 169, 0.16), rgba(0, 135, 169, 0.34))
+    ) border-box;
   color: #125059;
   font-weight: 600;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
@@ -758,12 +763,118 @@ img {
 
 .contact-link-item:hover {
   transform: translateY(-2px);
-  border-color: rgba(0, 135, 169, 0.3);
+  background:
+    var(--contact-bg-hover, var(--contact-bg, var(--surface-muted))) padding-box,
+    var(
+      --contact-border-gradient-hover,
+      var(
+        --contact-border-gradient,
+        linear-gradient(135deg, rgba(0, 135, 169, 0.22), rgba(0, 135, 169, 0.42))
+      )
+    ) border-box;
   box-shadow: 0 10px 18px rgba(0, 135, 169, 0.14);
 }
 
 .contact-link-item svg {
   color: var(--primary-dark);
+}
+
+.contact-link-item.is-whatsapp {
+  --contact-bg: linear-gradient(135deg, #1db954, #25d366);
+  --contact-bg-hover: linear-gradient(135deg, #1cab4e, #23c760);
+  --contact-border-gradient: linear-gradient(135deg, #169946, #1faa4a);
+  --contact-border-gradient-hover: linear-gradient(135deg, #14873d, #1a9942);
+  color: #ffffff;
+}
+
+.contact-link-item.is-phone {
+  --contact-bg: linear-gradient(135deg, #0ea5a8, #14b8a6);
+  --contact-bg-hover: linear-gradient(135deg, #0d9699, #12a594);
+  --contact-border-gradient: linear-gradient(135deg, #0b7f85, #0ea38f);
+  --contact-border-gradient-hover: linear-gradient(135deg, #0a6e73, #0d917f);
+  color: #ffffff;
+}
+
+.contact-link-item.is-email {
+  --contact-bg: linear-gradient(
+    135deg,
+    #4285f4 0%,
+    #34a853 33%,
+    #fbbc05 66%,
+    #ea4335 100%
+  );
+  --contact-bg-hover: linear-gradient(
+    135deg,
+    #3d7be2 0%,
+    #30984b 33%,
+    #eca90a 66%,
+    #d93f32 100%
+  );
+  --contact-border-gradient: linear-gradient(135deg, #3f73cb, #c86f2e);
+  --contact-border-gradient-hover: linear-gradient(135deg, #3566b7, #b55f26);
+  color: #ffffff;
+}
+
+.contact-link-item.is-instagram {
+  --contact-bg: linear-gradient(135deg, #d62976, #f58529);
+  --contact-bg-hover: linear-gradient(135deg, #c9246a, #e97d25);
+  --contact-border-gradient: linear-gradient(135deg, #b32266, #cf6d22);
+  --contact-border-gradient-hover: linear-gradient(135deg, #9f1f5a, #b9611f);
+  color: #ffffff;
+}
+
+.contact-link-item.is-tiktok {
+  --contact-bg: linear-gradient(135deg, #111827, #00cfd0);
+  --contact-bg-hover: linear-gradient(135deg, #0f1522, #00bfc0);
+  --contact-border-gradient: linear-gradient(135deg, #2a2f3b, #0a8f9f);
+  --contact-border-gradient-hover: linear-gradient(135deg, #1f2430, #097d8b);
+  color: #ffffff;
+}
+
+.contact-link-item.is-facebook {
+  --contact-bg: linear-gradient(135deg, #2563eb, #4f8dff);
+  --contact-bg-hover: linear-gradient(135deg, #215ad7, #4882ea);
+  --contact-border-gradient: linear-gradient(135deg, #2157cc, #3f74dd);
+  --contact-border-gradient-hover: linear-gradient(135deg, #1d4db7, #3867c4);
+  color: #ffffff;
+}
+
+.contact-link-item.is-youtube {
+  --contact-bg: linear-gradient(135deg, #dc2626, #ef4444);
+  --contact-bg-hover: linear-gradient(135deg, #ca2121, #de3e3e);
+  --contact-border-gradient: linear-gradient(135deg, #b91f1f, #c93a3a);
+  --contact-border-gradient-hover: linear-gradient(135deg, #a91b1b, #b63333);
+  color: #ffffff;
+}
+
+.contact-link-item.is-all-links {
+  --contact-bg: linear-gradient(135deg, #7c3aed, #a855f7);
+  --contact-bg-hover: linear-gradient(135deg, #6f33d7, #9d4be8);
+  --contact-border-gradient: linear-gradient(135deg, #5f2fc1, #8740d6);
+  --contact-border-gradient-hover: linear-gradient(135deg, #5329aa, #7639be);
+  color: #ffffff;
+}
+
+.contact-link-item.is-whatsapp svg,
+.contact-link-item.is-phone svg,
+.contact-link-item.is-email svg,
+.contact-link-item.is-instagram svg,
+.contact-link-item.is-tiktok svg,
+.contact-link-item.is-facebook svg,
+.contact-link-item.is-youtube svg,
+.contact-link-item.is-all-links svg {
+  color: #ffffff;
+}
+
+.contact-link-item.is-whatsapp:hover,
+.contact-link-item.is-phone:hover,
+.contact-link-item.is-email:hover,
+.contact-link-item.is-instagram:hover,
+.contact-link-item.is-tiktok:hover,
+.contact-link-item.is-facebook:hover,
+.contact-link-item.is-youtube:hover,
+.contact-link-item.is-all-links:hover {
+  box-shadow: 0 12px 20px rgba(16, 63, 73, 0.2);
 }
 
 .linkhub-page {
