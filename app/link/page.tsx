@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import TrailingSlashRedirect from "./trailing-slash-redirect";
 
 export const metadata: Metadata = {
   title: "ARTALO",
@@ -41,31 +42,34 @@ const socialLinks = [
 
 export default function LinkHubPage() {
   return (
-    <div className="page page-bg-mixed linkhub-page">
-      <section className="section linkhub-section">
-        <div className="section-inner linkhub-inner">
-          <Link href="/" className="linkhub-logo" aria-label="Torna alla home">
-            <img src="./logo.svg" alt="Logo ARTALO" />
-            <span className="brand-logo">ARTALO</span>
-          </Link>
+    <>
+      <TrailingSlashRedirect />
+      <div className="page page-bg-mixed linkhub-page">
+        <section className="section linkhub-section">
+          <div className="section-inner linkhub-inner">
+            <Link href="/" className="linkhub-logo" aria-label="Torna alla home">
+              <img src="./logo.svg" alt="Logo ARTALO" />
+              <span className="brand-logo">ARTALO</span>
+            </Link>
 
-          <h1 className="linkhub-title">I nostri link</h1>
+            <h1 className="linkhub-title">I nostri link</h1>
 
-          <div className="linkhub-grid">
-            {socialLinks.map(({ href, label, imageSrc }) => (
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noreferrer"
-                aria-label={label}
-              >
-                <img src={imageSrc} alt={label} className="linkhub-item-image" />
-              </a>
-            ))}
+            <div className="linkhub-grid">
+              {socialLinks.map(({ href, label, imageSrc }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={label}
+                >
+                  <img src={imageSrc} alt={label} className="linkhub-item-image" />
+                </a>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
 }
