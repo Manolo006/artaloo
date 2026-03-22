@@ -834,7 +834,8 @@ img {
 
 .page-bg-blue,
 .page-bg-green,
-.page-bg-viola {
+.page-bg-viola,
+.page-bg-mixed {
   min-height: 100vh;
   background-color: transparent;
   background-repeat: no-repeat;
@@ -856,9 +857,14 @@ body:has(.page-bg-viola) {
   background: #6d5a9e url("../public/background/bg-viola.svg") no-repeat center top / 100% auto;
 }
 
+body:has(.page-bg-mixed) {
+  background: #3a7f90 url("../public/background/bg-mixed.svg") no-repeat center top / 100% auto;
+}
+
 body:has(.page-bg-blue) .page.page-bg-blue,
 body:has(.page-bg-green) .page.page-bg-green,
-body:has(.page-bg-viola) .page.page-bg-viola {
+body:has(.page-bg-viola) .page.page-bg-viola,
+body:has(.page-bg-mixed) .page.page-bg-mixed {
   background: transparent;
 }
 

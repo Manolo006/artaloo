@@ -41,7 +41,7 @@ const socialLinks = [
 
 export default function LinkHubPage() {
   return (
-    <div className="page linkhub-page">
+    <div className="page page-bg-mixed linkhub-page">
       <section className="section linkhub-section">
         <div className="section-inner linkhub-inner">
           <Link href="/" className="linkhub-logo" aria-label="Torna alla home">
