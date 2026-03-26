@@ -169,17 +169,21 @@
   }
 
   function initCarousels() {
-    document.querySelectorAll(".carousel").forEach((carousel) => {
-      const slides = Array.from(carousel.querySelectorAll(".slide"));
+    document.querySelectorAll(".opere-carousel, .carousel").forEach((carousel) => {
+      const isOpereCarousel = carousel.classList.contains("opere-carousel");
+      const slideSelector = isOpereCarousel ? ".opere-carousel-slide" : ".slide";
+      const activeClass = isOpereCarousel ? "is-active" : "active";
+
+      const slides = Array.from(carousel.querySelectorAll(slideSelector));
       if (slides.length < 2) return;
 
       let index = 0;
       const interval = Number(carousel.dataset.interval || 5000);
 
       setInterval(() => {
-        slides[index].classList.remove("active");
+        slides[index].classList.remove(activeClass);
         index = (index + 1) % slides.length;
-        slides[index].classList.add("active");
+        slides[index].classList.add(activeClass);
       }, interval);
     });
   }
